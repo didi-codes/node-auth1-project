@@ -8,6 +8,7 @@
     "mup": "knex migrate:up",
     "mlatest": "knex migrate:latest",
     "mdown": "knex migrate:down",
+    "seed": "knex seed:run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
