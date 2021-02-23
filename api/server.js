@@ -5,6 +5,7 @@ const session = require('express-session');
 const KnexSessionStore = require('connect-session-knex');
 
 const usersRouter = require('./users/users-router.js');
+const authRouter = require('./auth/auth-router');
 
 const config = {
   name: 'sessionId',
@@ -34,10 +35,10 @@ server.use(express.json());
 server.use(cors());
 
 server.use('api/users', usersRouter);
+server.use('api/auth', authRouter);
 
 server.get('/', (req, res) => {
   res.json({ api: 'up' });
 });
 
 module.exports = server;
-
